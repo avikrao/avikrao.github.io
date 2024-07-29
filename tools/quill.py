@@ -170,7 +170,7 @@ class Quill(cmd.Cmd):
     @validate
     def do_set_quote(self, quote: str):
         """Set quote body"""
-        self.new_quotes[-1].quote = quote
+        self.new_quotes[-1].quote = quote.replace("\\n", "\n")
         self._display()
 
     @validate
