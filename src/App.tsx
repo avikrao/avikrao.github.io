@@ -1,4 +1,5 @@
 import { NavLink, Route, Routes, HashRouter } from 'react-router-dom';
+import Home from './Home';
 import QuotePage from './QuotePage';
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
         <nav className="bg-white shadow-md">
           <div className="container mx-auto px-4">
             <div className="flex justify-between items-center py-4">
-              <h1 className="text-xl font-bold text-gray-800">Excerpts</h1>
+              <h1 className="text-xl font-bold text-gray-800">Avik's Excerpts</h1>
               <div className="hidden sm:flex space-x-4 mx-auto">
                 {['Home', 'Quotes', 'Blog', 'Miscellaneous'].map((tab) => (
                   <NavLink
@@ -52,15 +53,6 @@ const App = () => {
     </HashRouter>
   );
 };
-
-const Home = () => (
-  <div className="text-center">
-    <h2 className="text-2xl font-bold mb-4">Welcome to Excerpts</h2>
-    <p className="text-lg mb-2">Discover a world of inspiration and knowledge.</p>
-    <p className="text-lg mb-2">Browse through our curated collection of quotes, insightful blog posts, and more.</p>
-    <p className="text-lg">Use the navigation bar above to explore different sections.</p>
-  </div>
-);
 
 const Blog = () => <p className="text-lg">Welcome to our blog section.</p>;
 const Miscellaneous = () => <p className="text-lg">Miscellaneous content goes here.</p>;

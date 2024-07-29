@@ -17,7 +17,7 @@ export default function QuotePage() {
   return (
     <div className="flex items-center justify-center min-h-[calc(100vh-4rem)] p-4">
       <div className="bg-white shadow-lg rounded-lg p-10 max-w-3xl w-full mx-4 transition-all duration-300 hover:shadow-xl">
-        <blockquote className="text-2xl sm:text-3xl font-semibold text-gray-800 mb-6 leading-relaxed whitespace-pre-line">
+        <blockquote className="sm:text-xl font-mono font-semibold text-gray-800 mb-6 leading-relaxed whitespace-pre-line">
           {quote.quote} 
         </blockquote>
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4">

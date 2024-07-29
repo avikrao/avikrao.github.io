@@ -159,8 +159,8 @@ class Quill(cmd.Cmd):
                 return False
             encoded: Quote = quote.encode()
             exported_quotes.append(encoded.export())
-        with open(self.quote_file, 'w') as qf:
-            json.dump(exported_quotes, qf)
+        with open(self.quote_file, "w") as qf:
+            json.dump(exported_quotes, qf, indent=2)
         return True
 
     def do_exit(self, _: str) -> bool:
@@ -205,6 +205,7 @@ class Quill(cmd.Cmd):
             print("Error: Enter a valid quote index.")
             return
         quote_number: int = int(raw_quote_number)
+
         def _pop_quote(quote_number: int):
             if quote_number < len(self.quotes):
                 return self.quotes.pop(quote_number)
@@ -223,7 +224,6 @@ class Quill(cmd.Cmd):
         """Delete currently WIP quote"""
         deleted: Quote = self.new_quotes.pop()
         print(f"Successfully deleted {deleted}")
-
 
 
 if __name__ == "__main__":
