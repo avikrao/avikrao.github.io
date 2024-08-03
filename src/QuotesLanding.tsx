@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import QuoteParser from './QuoteParser';
 
@@ -6,9 +5,8 @@ const QuotesLanding = () => {
   const navigate = useNavigate();
 
   const goToRandomQuote = () => {
-    // Assuming you have 100 quotes. Adjust this number as needed.
-    const randomQuoteId = Math.floor(Math.random() * QuoteParser.quoteCount());
-    navigate(`/quote/${randomQuoteId}`);
+    const quote = QuoteParser.getRandomQuote();
+    navigate(`/quote/${quote.slug}`);
   };
 
   return (

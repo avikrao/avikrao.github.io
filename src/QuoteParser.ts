@@ -6,6 +6,7 @@ export class Quote {
   context: string;
   tags: string[];
   date: Date;
+  slug: string;
 
   constructor(
     quote: string,
@@ -18,19 +19,23 @@ export class Quote {
     this.quote = decodeURIComponent(escape(atob(quote)));
     this.author = decodeURIComponent(escape(atob(author)));
     this.context = decodeURIComponent(escape(atob(context)));
-
     this.tags = tags;
     this.date = new Date(date);
+    this.slug = quote.slice(0, 10);
   }
 }
 
 export default class QuoteParser {
+  static readonly quoteSlices = Object.fromEntries(
+    encodedQuotes.map((quoteObj) => [quoteObj.quote.slice(0, 10), quoteObj]),
+  );
+
   static quoteCount(): number {
     return encodedQuotes.length;
   }
 
-  static getQuote(index: number): Quote {
-    const rawQuote = encodedQuotes[index];
+  static getQuote(slice: string): Quote {
+    const rawQuote = this.quoteSlices[slice];
     return new Quote(
       rawQuote.quote,
       rawQuote.author,
@@ -38,5 +43,11 @@ export default class QuoteParser {
       rawQuote.tags,
       rawQuote.date,
     );
+  }
+
+  static getRandomQuote(): Quote {
+    const randomQuoteId = Math.floor(Math.random() * QuoteParser.quoteCount());
+    const slice = Object.keys(this.quoteSlices)[randomQuoteId];
+    return this.getQuote(slice);
   }
 }
