@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
 import * as ThoughtPosts from './thoughts/ThoughtPost';
@@ -29,7 +28,7 @@ const ThoughtLanding = () => {
                 <div className="p-6 flex-grow">
                   <h2 className="text-xl font-semibold text-gray-800 mb-2">{PostComponent.title}</h2>
                   <p className="text-gray-600 mb-4">{PostComponent.description}</p>
-                  <p className="text-sm text-gray-500">{new Date(PostComponent.date).toLocaleDateString()}</p>
+                  <p className="text-sm text-gray-500">{PostComponent.date}</p>
                 </div>
               </div>
             </div>

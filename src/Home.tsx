@@ -7,7 +7,7 @@ export default () => (
       <br />
       As a friend so aptly put it, "the CS major's finsta".
     </p>
-    <iframe src="https://giphy.com/embed/Y4VkyhG1RO7pQbQFhF" width="480" height="269" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/youngthug-hot-young-thug-gunna-Y4VkyhG1RO7pQbQFhF"></a></p>
+    <iframe src="https://giphy.com/embed/Y4VkyhG1RO7pQbQFhF" width="480" height="269" className="max-w-full" frameBorder="0" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/youngthug-hot-young-thug-gunna-Y4VkyhG1RO7pQbQFhF"></a></p>
   </div>
 );
 

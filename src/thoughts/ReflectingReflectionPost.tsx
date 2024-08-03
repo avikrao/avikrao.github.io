@@ -5,7 +5,7 @@ const Post = () => {
         <h1 className="text-4xl">{Post.title}</h1>
         <h2 className="text-xl mt-3">{Post.date}</h2>
       </div>
-      <div className="m-auto w-3/5 mt-20">
+      <div className="m-auto sm:w-full lg:w-3/5 mt-20">
         <div className="leading-8 whitespace-pre-wrap text-wrap indent-8">
           <p className="mb-4"><em>"I'm working on myself."</em></p>
           <p>
