@@ -53,8 +53,8 @@ const Post = () => {
 
 Post.title = "Reflecting on Self-Reflection";
 Post.description = "Thoughts on the difficulty of evaluating self-growth"
-Post.date = "07-31-2024";
-Post.image = "/reflection.jpg"; // Optional
+Post.date = "08-02-2024";
+Post.image = "/reflection.jpg";
 Post.urlSlug = "reflecting-on-self-reflection";
 
 export default Post;
