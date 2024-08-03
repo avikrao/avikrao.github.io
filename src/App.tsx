@@ -6,6 +6,7 @@ import QuotesLanding from './QuotesLanding';
 import * as ThoughtPosts from './thoughts/ThoughtPost';
 
 const App = () => {
+  document.title = "Avik's Excerpts";
   return (
     <HashRouter>
       <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -52,7 +53,7 @@ const App = () => {
             {Object.values(ThoughtPosts).map((PostComponent, index) => (
               <Route
                 key={index}
-                path={`/blog/${PostComponent.urlSlug}`}
+                path={`/thought/${PostComponent.urlSlug}`}
                 element={<PostComponent />}
               />
             ))}
@@ -64,6 +65,6 @@ const App = () => {
   );
 };
 
-const Miscellaneous = () => <p className="text-lg">Miscellaneous content goes here.</p>;
+const Miscellaneous = () => <p className="text-lg">This will eventually be something fun</p>;
 
 export default App;

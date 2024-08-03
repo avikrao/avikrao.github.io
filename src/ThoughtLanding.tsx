@@ -1,11 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-// Import your blog post components
 import * as ThoughtPosts from './thoughts/ThoughtPost';
 
 const ThoughtLanding = () => {
-  // Convert the imported blog posts object into an array
   const thoughtPosts = Object.values(ThoughtPosts);
 
   return (
@@ -16,7 +14,7 @@ const ThoughtLanding = () => {
       </p>
       <div className="space-y-6">
         {thoughtPosts.map((PostComponent, index) => (
-          <Link key={index} to={`/blog/${PostComponent.urlSlug}`} className="block">
+          <Link key={index} to={`/thought/${PostComponent.urlSlug}`} className="block">
             <div className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="flex">
                 {PostComponent.image && (

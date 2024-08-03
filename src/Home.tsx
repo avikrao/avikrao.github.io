@@ -1,6 +1,5 @@
 export default () => (
   <div className="whitespace-pre-line">
-    <h2 className="text-2xl font-bold mb-4">Excerpts.</h2>
     <p className="text-xl mb-5 whitespace-pre-line">
       For now, this is a curated collection of quotes and thoughts. 
       <br/>
