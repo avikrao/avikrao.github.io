@@ -54,7 +54,7 @@ const Post = () => {
 Post.title = "Reflecting on Self-Reflection";
 Post.description = "Thoughts on the difficulty of evaluating self-growth"
 Post.date = "07-31-2024";
-Post.image = "/path/to/image.jpg"; // Optional
+Post.image = "/reflection.jpg"; // Optional
 Post.urlSlug = "reflecting-on-self-reflection";
 
 export default Post;

@@ -14,15 +14,18 @@ const ThoughtLanding = () => {
       <p className="text-lg text-gray-600 mb-8 whitespace-pre-line leading-7">
         Random thoughts I have. Could be short (don't be surprised if you find a one-liner), or they could be essays.
       </p>
-
       <div className="space-y-6">
         {thoughtPosts.map((PostComponent, index) => (
           <Link key={index} to={`/blog/${PostComponent.urlSlug}`} className="block">
             <div className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="flex">
                 {PostComponent.image && (
-                  <div className="flex-shrink-0">
-                    <img className="h-32 w-32 object-cover" src={PostComponent.image} alt={PostComponent.title} />
+                  <div className="flex-shrink-0 w-36">
+                    <img 
+                      className="h-full w-full object-cover" 
+                      src={PostComponent.image} 
+                      alt={PostComponent.title}
+                    />
                   </div>
                 )}
                 <div className="p-6 flex-grow">
