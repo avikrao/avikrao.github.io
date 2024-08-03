@@ -1,6 +1,9 @@
 import { NavLink, Route, Routes, HashRouter } from 'react-router-dom';
 import Home from './Home';
+import ThoughtLanding from './ThoughtLanding';
 import QuotePage from './QuotePage';
+import QuotesLanding from './QuotesLanding';
+import * as ThoughtPosts from './thoughts/ThoughtPost';
 
 const App = () => {
   return (
@@ -11,15 +14,14 @@ const App = () => {
             <div className="flex justify-between items-center py-4">
               <h1 className="text-xl font-bold text-gray-800">Avik's Excerpts</h1>
               <div className="hidden sm:flex space-x-4 mx-auto">
-                {['Home', 'Quotes', 'Blog', 'Miscellaneous'].map((tab) => (
+                {['Home', 'Quotes', 'Thoughts', 'Miscellaneous'].map((tab) => (
                   <NavLink
                     key={tab}
                     to={tab === 'Home' ? '/' : `/${tab.toLowerCase()}`}
                     className={({ isActive }) =>
-                      `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
-                        isActive
-                          ? 'bg-blue-500 text-white'
-                          : 'text-gray-700 hover:bg-blue-100'
+                      `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${isActive
+                        ? 'bg-blue-500 text-white'
+                        : 'text-gray-700 hover:bg-blue-100'
                       }`
                     }
                   >
@@ -34,7 +36,7 @@ const App = () => {
                 >
                   <option value="/">Home</option>
                   <option value="/quotes">Quotes</option>
-                  <option value="/blog">Blog</option>
+                  <option value="/thoughts">Thoughts</option>
                   <option value="/miscellaneous">Miscellaneous</option>
                 </select>
               </div>
@@ -44,8 +46,16 @@ const App = () => {
         <main className="flex-grow container mx-auto px-4 py-8">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/quotes" element={<QuotesLanding />} />
             <Route path="/quote/:id" element={<QuotePage />} />
-            <Route path="/blog" element={<Blog />} />
+            <Route path="/thoughts" element={<ThoughtLanding />} />
+            {Object.values(ThoughtPosts).map((PostComponent, index) => (
+              <Route
+                key={index}
+                path={`/blog/${PostComponent.urlSlug}`}
+                element={<PostComponent />}
+              />
+            ))}
             <Route path="/miscellaneous" element={<Miscellaneous />} />
           </Routes>
         </main>
@@ -54,7 +64,6 @@ const App = () => {
   );
 };
 
-const Blog = () => <p className="text-lg">Welcome to our blog section.</p>;
 const Miscellaneous = () => <p className="text-lg">Miscellaneous content goes here.</p>;
 
 export default App;

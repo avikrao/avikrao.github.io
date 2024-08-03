@@ -13,6 +13,8 @@ class Tag(enum.Enum):
     LYRIC = 1
     BOOK = 2
     MOVIE = 3
+    INTERVIEW = 4
+    FRIEND = 5
 
 
 @dataclass
