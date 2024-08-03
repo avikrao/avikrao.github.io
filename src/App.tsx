@@ -4,9 +4,18 @@ import ThoughtLanding from './ThoughtLanding';
 import QuotePage from './QuotePage';
 import QuotesLanding from './QuotesLanding';
 import * as ThoughtPosts from './thoughts/ThoughtPost';
+import { useState } from 'react';
 
 const App = () => {
+
+  const [selectedTab, setSelectedTab] = useState("/");
+
   document.title = "Avik's Excerpts";
+  const mobileTabSelect = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    window.location.hash = event.target.value;
+    setSelectedTab(event.target.value);
+  }
+
   return (
     <HashRouter>
       <div className="min-h-screen bg-gray-50 flex flex-col">
@@ -33,7 +42,8 @@ const App = () => {
               <div className="sm:hidden">
                 <select
                   className="block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
-                  onChange={(e) => window.location.hash = e.target.value}
+                  onChange={mobileTabSelect}
+                  value={selectedTab}
                 >
                   <option value="/">Home</option>
                   <option value="/quotes">Quotes</option>

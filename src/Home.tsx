@@ -3,7 +3,7 @@ export default () => (
     <p className="text-xl mb-5 whitespace-pre-line">
       For now, this is a curated collection of quotes and thoughts. 
       <br/>
-      I thought it might be fun to leave a psyche-print on  tiny corner of the internet.
+      I thought it might be fun to leave a psyche-print on a tiny corner of the internet.
       <br />
       As a friend so aptly put it, "the CS major's finsta".
     </p>
