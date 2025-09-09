@@ -20,10 +20,10 @@ const QuotesLanding = () => {
           onClick={goToRandomQuote}
           className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
         >
-          Get Random Quote
+          Gimme a quote!
         </button>
         <p className='text-xs m-8 text-slate-400'>
-          Nobody will care, but I spent hours writing a tool that encodes quotes in base64 so cheating is too tedious to bother with for those who are technical, and impossible for those who aren't :)
+          If you <em>really</em> want to see them all, you can find all the quotes obfuscated via base-64 encoding on my GitHub.
         </p>
       </div>
     </div>

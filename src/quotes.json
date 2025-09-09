@@ -6,7 +6,8 @@
     "tags": [
       "MOVIE"
     ],
-    "date": "2024-07-28"
+    "date": "2024-07-28",
+    "slug": "b374e8a10ce4"
   },
   {
     "quote": "U28gd2hhdCB3b3VsZCB5b3Ugc2F5IApJZiBpdCBhbGwgd2VudCBhd2F5IApBbmQgdGhlIHBsYW5zIHRoYXQgd2UgbWFkZSBmYWxsIHNob3J0PyAKT2gsIHdoYXQgd291bGQgeW91IGRvIApJZiBpdCB3YXMgYWxsIGZvciB5b3UgCkV2ZXJ5dGhpbmcgeW91IHdlcmUgbG9uZ2luZyBmb3I/",
@@ -15,7 +16,8 @@
     "tags": [
       "LYRIC"
     ],
-    "date": "2024-07-28"
+    "date": "2024-07-28",
+    "slug": "e4e4b3ae7cfb"
   },
   {
     "quote": "V2hlbiBJJ20gZG9uZSB3aXRoIHRoaXMsIHRoYXQgd2lsbCBiZSB3aGF0IGl0IGlzLCBhbmQgSSdsbCBmaW5kIGEgd2F5LiBCdXQgdGhlcmUncyBzb21ldGhpbmcgaW5zaWRlIG9mIG1lIHByb3BlbGxpbmcgdGhhdCBJJ20gbm90IGdvaW5nIHRvIGdpdmUgdXAgdW50aWwgdGhlIHdoZWVscyBmYWxsIG9mZi4gVGhhdCdzIHdoYXQgSSdtIG1hZGUgb2YuIEkgc2VlIGFsbCB0aGUgYXJndW1lbnRzIGFnYWluc3QgaXQsIGJ1dCBJIHdpc2ggSSBjb3VsZCByZWxhdGUgdGhlIGludGFuZ2libGVzIHRvIHlvdS4gTXkgZ3Vlc3MgaXMgdGhhdCB3ZSdyZSBhbGwgYnVpbHQgdGhlIHNhbWUuIE5vbmUgb2YgdXMgYXJlIGNvbXBsZXRlbHkgc3R1cGlkLS1hIGxpdHRsZSBkZXJhbmdlZCwgSSB0aGluayBhIHN0cm9uZyBhcmd1bWVudCBbY291bGQgYmUgbWFkZV0sIEkgZG8uIEJ1dCB1bHRpbWF0ZWx5LCB3ZSBhbHNvIGtub3cgd2hhdCB3ZSBoYXZlLiBBbmQgdG8gZ28gYW5kIGxheSBkb3duIGluIHRoYXQgc2Vuc2Ugb2YgaXQsIHRoYXQncyBsaWtlIGVtYnJhY2luZyB3aGF0IHdlJ3ZlIGRvbmUgd2l0aCBvdXIgbGl2ZXMu",
@@ -24,7 +26,8 @@
     "tags": [
       "INTERVIEW"
     ],
-    "date": "2024-07-29"
+    "date": "2024-07-29",
+    "slug": "2f4a611b398f"
   },
   {
     "quote": "U2VlIGFwcGVuZGl4IEEgZm9yIGEgcHJvb2YgdGhhdCBXaW5zdG9uIENodXJjaGlsbCB3YXMgYSBjYXJyb3Qu",
@@ -33,7 +36,8 @@
     "tags": [
       "BOOK"
     ],
-    "date": "2024-08-02"
+    "date": "2024-08-02",
+    "slug": "e7303a07730e"
   },
   {
     "quote": "V2hlbiBJJ20gb2xkZXIsIEknbGwgYmUgc2lsZW50IGJlc2lkZSB5b3UgCkkga25vdyB3b3JkcyB3b24ndCBiZSBlbm91Z2ggCkFuZCB0aGV5IHdvbid0IG5lZWQgdG8ga25vdyB0aGUgbmFtZXMgb3Igb3VyIGZhY2VzIApCdXQgdGhleSB3aWxsIGNhcnJ5IG9uIGZvciB1cw==",
@@ -42,7 +46,8 @@
     "tags": [
       "LYRIC"
     ],
-    "date": "2024-08-13"
+    "date": "2024-08-13",
+    "slug": "291aa0f91bc3"
   },
   {
     "quote": "SSdtIGEgdGhpZWYuIApWYXJpb3VzIGtpbmRzIG9mIHRoaWV2ZXMgaGF2ZSBleGlzdGVkIHRocm91Z2hvdXQgaGlzdG9yeSwgYnV0IEknbSBhIGJpdCBkaWZmZXJlbnQgZnJvbSB0aG9zZSBndXlzLiAKSSBkb24ndCBzdGVhbCBtb25leS4gSSBhbHNvIGhhdmUgemVybyBpbnRlcmVzdCBpbiB0aGluZ3MgbGlrZSBhbnRpcXVlIGpld2VscyBvciB2YWx1YWJsZSB3b3JrcyBvZiBhcnRzLiAKSSdtIGEgdGhpZWYgd2hvIHN0ZWFscyBzb3VuZHMu",
@@ -51,6 +56,37 @@
     "tags": [
       "LYRIC"
     ],
-    "date": "2024-08-18"
+    "date": "2024-08-18",
+    "slug": "d8094b484abe"
+  },
+  {
+    "quote": "RG9uJ3QgdW5kZXJlc3RpbWF0ZSB0aGUgcG93ZXIgb2YgYSBjb21tb24gbWFuLg==",
+    "author": "U2hhaCBSdWtoIEtoYW4gKGFzIFJhaHVsIE1pdGhhaXdhbGEp",
+    "context": "Q2hlbm5haSBFeHByZXNz",
+    "tags": [
+      "MOVIE"
+    ],
+    "date": "2025-09-06",
+    "slug": "53f4b580111e"
+  },
+  {
+    "quote": "SSB3aWxsIGJlIHRoZXJlIG5vIG1hdHRlciB3aGF0Lg==",
+    "author": "S3lsaWFuIE1iYXBwZQ==",
+    "context": "T24gcGxheWluZyBmb3IgUFNHIGluIDIwMjAtMjE=",
+    "tags": [
+      "INTERVIEW"
+    ],
+    "date": "2025-09-08",
+    "slug": "2e3540d28c43"
+  },
+  {
+    "quote": "R2l2ZSB1cCB5b3VyIGRyZWFtcywKRGVhdGggaXMgY29taW5nLApMZXQncyBwYXJ0eS4=",
+    "author": "S2FuYW4gR2lsbA==",
+    "context": "SXMgVGhpcyBJdD8=",
+    "tags": [
+      "COMEDY"
+    ],
+    "date": "2025-09-08",
+    "slug": "e78ff0f63bdf"
   }
 ]

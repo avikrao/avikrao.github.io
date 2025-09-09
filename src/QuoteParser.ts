@@ -14,6 +14,7 @@ export class Quote {
     context: string,
     tags: string[],
     date: string,
+    slug: string,
   ) {
     // Quote, author, context are base-64 encoded. No sneak peeking in GitHub!
     this.quote = decodeURIComponent(escape(atob(quote)));
@@ -21,13 +22,13 @@ export class Quote {
     this.context = decodeURIComponent(escape(atob(context)));
     this.tags = tags;
     this.date = new Date(date);
-    this.slug = quote.slice(0, 10);
+    this.slug = slug;
   }
 }
 
 export default class QuoteParser {
   static readonly quoteSlices = Object.fromEntries(
-    encodedQuotes.map((quoteObj) => [quoteObj.quote.slice(0, 10), quoteObj]),
+    encodedQuotes.map((quoteObj) => [quoteObj.slug, quoteObj]),
   );
 
   static quoteCount(): number {
@@ -42,6 +43,7 @@ export default class QuoteParser {
       rawQuote.context,
       rawQuote.tags,
       rawQuote.date,
+      rawQuote.slug,
     );
   }
 
