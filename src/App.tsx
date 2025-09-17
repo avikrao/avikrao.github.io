@@ -3,7 +3,7 @@ import Home from './Home';
 import ThoughtLanding from './ThoughtLanding';
 import QuotePage from './QuotePage';
 import QuotesLanding from './QuotesLanding';
-import * as ThoughtPosts from './thoughts/ThoughtPost';
+import MarkdownPost from './thoughts/MarkdownPost';
 import { useState } from 'react';
 
 const App = () => {
@@ -60,13 +60,7 @@ const App = () => {
             <Route path="/quotes" element={<QuotesLanding />} />
             <Route path="/quote/:id" element={<QuotePage />} />
             <Route path="/thoughts" element={<ThoughtLanding />} />
-            {Object.values(ThoughtPosts).map((PostComponent, index) => (
-              <Route
-                key={index}
-                path={`/thought/${PostComponent.urlSlug}`}
-                element={<PostComponent />}
-              />
-            ))}
+            <Route path="/thought/:slug" element={<MarkdownPost />} />
             <Route path="/miscellaneous" element={<Miscellaneous />} />
           </Routes>
         </main>

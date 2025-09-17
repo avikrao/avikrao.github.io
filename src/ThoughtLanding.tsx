@@ -1,9 +1,36 @@
 import { Link } from 'react-router-dom';
-
-import * as ThoughtPosts from './thoughts/ThoughtPost';
+import { useEffect, useState } from 'react';
+import { loadAllThoughts, ThoughtPost } from './thoughts/ThoughtLoader';
 
 const ThoughtLanding = () => {
-  const thoughtPosts = Object.values(ThoughtPosts);
+  const [thoughts, setThoughts] = useState<ThoughtPost[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadThoughts = async () => {
+      try {
+        const allThoughts = await loadAllThoughts();
+        setThoughts(allThoughts);
+      } catch (error) {
+        console.error('Error loading thoughts:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadThoughts();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="max-w-6xl mx-auto px-4 py-8">
+        <h1 className="text-3xl font-bold text-gray-800 mb-4">Thoughts</h1>
+        <div className="flex justify-center items-center min-h-64">
+          <div className="text-lg text-gray-600">Loading thoughts...</div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">
@@ -12,23 +39,23 @@ const ThoughtLanding = () => {
         Random thoughts I have. Could be short (don't be surprised if you find a one-liner), or they could be essays.
       </p>
       <div className="space-y-6">
-        {thoughtPosts.map((PostComponent, index) => (
-          <Link key={index} to={`/thought/${PostComponent.urlSlug}`} className="block">
+        {thoughts.map((thought, index) => (
+          <Link key={index} to={`/thought/${thought.meta.urlSlug}`} className="block">
             <div className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-lg transition-shadow duration-300">
               <div className="flex">
-                {PostComponent.image && (
+                {thought.meta.image && (
                   <div className="flex-shrink-0 w-36">
                     <img 
                       className="h-full w-full object-cover" 
-                      src={PostComponent.image} 
-                      alt={PostComponent.title}
+                      src={thought.meta.image} 
+                      alt={thought.meta.title}
                     />
                   </div>
                 )}
                 <div className="p-6 flex-grow">
-                  <h2 className="text-xl font-semibold text-gray-800 mb-2">{PostComponent.title}</h2>
-                  <p className="text-gray-600 mb-4">{PostComponent.description}</p>
-                  <p className="text-sm text-gray-500">{PostComponent.date}</p>
+                  <h2 className="text-xl font-semibold text-gray-800 mb-2">{thought.meta.title}</h2>
+                  <p className="text-gray-600 mb-4">{thought.meta.description}</p>
+                  <p className="text-sm text-gray-500">{thought.meta.date}</p>
                 </div>
               </div>
             </div>
