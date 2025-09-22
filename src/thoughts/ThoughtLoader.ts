@@ -25,7 +25,6 @@ export interface ThoughtPost {
 // List of markdown files in the public/thoughts directory
 const markdownFiles = [
   'reflecting-on-self-reflection.md',
-  'trickle-down-culture.md',
 ];
 
 export const loadAllThoughts = async (): Promise<ThoughtPost[]> => {

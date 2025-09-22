@@ -64,6 +64,14 @@ const MarkdownPost = () => {
               p: ({ children }) => <p>{children}</p>,
               em: ({ children }) => <em className="italic">{children}</em>,
               strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
+              a: ({ node, ...props }) => (
+                <a 
+                  {...props}
+                  className="font-semibold text-sky-600"
+                >
+                  {props.children}
+                </a>
+              )
             }}
           >
             {post.content}
